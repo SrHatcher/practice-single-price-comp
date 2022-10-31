@@ -44,8 +44,8 @@ body{
     height: auto;
     max-width: 37.5rem;
     margin: 0 1rem;
-    margin-block-start: 3vh;
-    margin-block-end: 3vh;
+    /*margin-block-start: 3vh;
+    margin-block-end: 3vh;*/
 
     border-radius: 0.7rem;
     overflow: hidden;
@@ -95,7 +95,7 @@ body{
     
 }
 .monthly_bill__amount{
-    margin-inline-end: 0.5vh;
+    margin-inline-end: 1rem;
 
     font-weight: 700;
     font-size: 3.9rem;
@@ -144,3 +144,65 @@ body{
     padding: 0;
     
 }
+
+ @media screen and (max-height: 835px){
+    .main{
+        margin-block-start: 3vh;
+        margin-block-end: 3vh;
+    }
+ }
+
+ @media screen and (min-width: 1000px){
+    .main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.8fr 1fr;
+        grid-template-areas: 'join join' 
+                            'monthly why';
+    
+        
+        height: 55rem;
+        max-width: 70rem;
+        margin: 0 1rem;
+    }
+
+    .main__join_community{
+        grid-area: join;
+
+        padding: 5rem 6rem;
+    }
+
+    .join_community__title{
+        font-size: 2.5rem;
+    }
+
+    .join_community__guarantee{        
+        margin-block-start: 2rem;
+    }
+
+    .join_community__text{
+        margin-block-start: 1rem;
+    }
+    .main__monthly_bill{
+        padding: 3.5rem 4rem;
+    }
+    .monthly_bill__title{
+        font-size: 1.8rem;
+    }
+    .monthly_bill__bill{
+        margin-block-start: 1.5rem;
+
+        font-size: 1.6rem;        
+    }
+    .monthly_bill__text{
+        font-size: 1.6rem;
+    }
+    .monthly_bill__button{
+        margin-block-start: 3rem;
+    }
+
+    .main__whyUs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+ }
